@@ -11,6 +11,7 @@ public class Main extends JavaPlugin {
 	
 	public void onEnable(){
 		getCommand("record").setExecutor(new Recording(this));
+		getServer().getPluginManager().registerEvents(new Chat(this), this);
 	}
 	public void onDisable(){ recording.clear(); }
 }
